@@ -7,5 +7,8 @@ import ru.clevertec.crudspringtestproject.entity.User;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "god", expression = "java(false)")
+    @Mapping(target = "admin", expression = "java(false)")
     User toEntity(UserDto userDto);
 }

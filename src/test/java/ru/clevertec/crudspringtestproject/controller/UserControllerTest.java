@@ -15,6 +15,7 @@ import ru.clevertec.crudspringtestproject.entity.User;
 import ru.clevertec.crudspringtestproject.mapper.UserMapper;
 import ru.clevertec.crudspringtestproject.service.impl.UserService;
 
+
 import static org.mockito.Mockito.when;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
