@@ -28,6 +28,6 @@ public class GodUserService extends UserServiceDecorator implements IGodService 
     @Override
     public User createAdminUser(User user) {
         user.admin(true);
-        return decoratedUserService.createUser(user);
+        return iUserService.createUser(user);
     }
 }

@@ -5,29 +5,29 @@ import ru.clevertec.crudspringtestproject.service.IUserService;
 
 
 public class UserServiceDecorator implements IUserService {
-    public final IUserService decoratedUserService;
+    public final IUserService iUserService;
 
-    public UserServiceDecorator(IUserService decoratedUserService) {
-        this.decoratedUserService = decoratedUserService;
+    public UserServiceDecorator(IUserService iUserService) {
+        this.iUserService = iUserService;
     }
 
     @Override
     public User createUser(User user) {
-        return decoratedUserService.createUser(user);
+        return iUserService.createUser(user);
     }
 
     @Override
     public User updateUser(Long id, User user) {
-        return decoratedUserService.updateUser(id, user);
+        return iUserService.updateUser(id, user);
     }
 
     @Override
     public void deleteUser(Long id) {
-        decoratedUserService.deleteUser(id);
+        iUserService.deleteUser(id);
     }
 
     @Override
     public User getUserById(Long id) {
-        return decoratedUserService.getUserById(id);
+        return iUserService.getUserById(id);
     }
 }

@@ -17,6 +17,6 @@ public class AdminUserService extends UserServiceDecorator implements IAdminUser
     @Override
     public User createAdminUser(User user) {
         user.admin(true);
-        return decoratedUserService.createUser(user);
+        return iUserService.createUser(user);
     }
 }
