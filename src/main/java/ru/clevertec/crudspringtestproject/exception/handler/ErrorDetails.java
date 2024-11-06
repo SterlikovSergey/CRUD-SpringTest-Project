@@ -15,6 +15,5 @@ public class ErrorDetails {
         this.timestamp = timestamp;
         this.message = message;
         this.errorDetailsMethodName = errorDetailsMethodName;
-
     }
 }

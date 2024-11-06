@@ -20,6 +20,8 @@ public class UserService implements IUserService {
     @Override
     public User updateUser(Long id, User user) {
         User userDb = getUserById(id);
+        userDb.setName(user.getName());
+        userDb.setPassword(user.getPassword());
         return userRepository.save(userDb);
     }
 
